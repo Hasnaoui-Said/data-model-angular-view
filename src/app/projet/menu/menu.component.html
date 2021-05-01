@@ -1,0 +1,36 @@
+
+
+<div class="body">
+  <nav>
+    <h1>Accueil</h1>
+    <div class="onglets">
+      <p class="link" routerLink="/data-mail" routerLinkActive="active">Create-email-data</p>
+      <p class="link" routerLink="/prio" routerLinkActive="active">Country</p>
+      <p class="link" routerLink="/cat" routerLinkActive="active">Categorie</p>
+      <form>
+        <input type="search" placeholder="Rechercher">
+      </form>
+
+      <p class="link" routerLink="/connexion" routerLinkActive="active">Login out </p>
+      <p><i class="far fa-heart"></i></p>
+      <p>bonjour{{userLogin.fistName}}</p>
+    </div>
+  </nav>
+  <div class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+<!-- Pied de page -->
+<footer>
+  <p>&copy; Contactez-nous au +2126 33 55 82 11</p>
+  <div class="social-media">
+    <p><i class="fab fa-facebook-f"></i></p>
+    <p><i class="fab fa-twitter"></i></p>
+    <p><i class="fab fa-instagram"></i></p>
+    <p><i class="fab fa-linkedin-in"></i></p>
+  </div>
+</footer>
+<!-- Fin du pied de page -->
+
+

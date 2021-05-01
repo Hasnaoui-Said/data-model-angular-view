@@ -1,0 +1,102 @@
+<div class="container">
+  <div class="card">
+      <h1 style="text-align: center">Test: data-Megration </h1>
+
+    <div class="row">
+      <div class="col-md-1 form-group"></div>
+      <div class="col-8 form-group">
+        <label>E-mail*:</label>
+        <textarea type="email" name="textarea" class="form-control"
+                  style="width:730px;height:75px;"[(ngModel)]="emailData.email">
+        </textarea>
+      </div>
+      <div class="col-md-3 form-group"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-1 form-group"></div>
+      <div class="col-8 form-group">
+        <label>Phone:</label>
+        <textarea type="email" name="textarea" class="form-control"
+                  style="width:730px;height:75px;">
+        </textarea>
+      </div>
+      <div class="col-md-3 form-group"></div>
+    </div>
+    <!--<div class="row">
+      <div class="col-md-1 form-group"></div>
+      <div class="col-8 form-group">
+        <label>E-mail*:</label>
+        <input type="email" class="form-control" name="code" [(ngModel)]="emailData.email">
+      </div>
+      <div class="col-md-3 form-group"></div>
+    </div>-->
+    <div class="row">
+      <div class="col-md-1 form-group"></div>
+      <div class="col-8 form-group">
+        <label>Cat</label>
+        <select class="form-select form-select-lg mb-3 form-control"
+                aria-label=".form-select-lg example" [(ngModel)]="emailData.cat_id.name" >
+          <option selected data-live-search="true">--select a Kategory--</option>
+          <optgroup *ngFor="let c of categories;">
+            <option value="{{c.name}}">{{c.name}}</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="col-md-3 form-group"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-1 form-group"></div>
+      <div class="col-8 form-group">
+        <label>State</label>
+        <select class="form-select form-select-lg mb-3 form-control"
+                aria-label=".form-select-lg example" [(ngModel)]="emailData.state_id.name">
+          <option selected data-live-search="true">--select a state--</option>
+          <optgroup *ngFor="let c of states;">
+            <option value="{{c.name}}">{{c.name}}</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="col-md-3 form-group"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-1 form-group"></div>
+      <div class="col-8 form-group">
+        <label>User</label>
+        <select class="form-select form-select-lg mb-3 form-control"
+                aria-label=".form-select-lg example" [(ngModel)]="emailData.user_id.reference">
+          <option selected data-live-search="true">--select an user--</option>
+          <optgroup *ngFor="let c of users;">
+            <option value="{{c.reference}}">{{c.reference}}</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="col-md-3 form-group"></div>
+    </div>
+    <div class="row">
+      <div class="col-md-1 form-group"></div>
+      <div class="col-8 form-group">
+        <label>Country</label>
+        <select class="selectpicker form-select form-select-lg mb-3 form-control multiple-task"
+                aria-label=".form-select-lg example" [(ngModel)]="emailData.ct_id.reference">
+          <option selected>--select a city--</option>
+          <optgroup *ngFor="let c of countrys;index as i ">
+            <option value="{{c.reference}}">{{c.reference}}</option>
+          </optgroup>
+        </select>
+      </div>
+      <div class="col-md-3 form-group"></div>
+    </div>
+
+
+    <div class="row">
+      <div class="col-md-3">
+      </div>
+      <div class="col-md-6">
+        <button class="btn btn-outline-info btn-block" (click)="save()">SAVE</button>
+      </div>
+      <div class="col-md-3">
+      </div>
+    </div>
+    <div class="card-header"></div>
+  </div>
+</div>
