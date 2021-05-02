@@ -64,36 +64,10 @@ input[type=submit]:hover {
   height: 100px;
   margin: 0 20px;
 }
+.row{
+  margin: 30px;
+}
+.bordre{
+  border-right: 2px black solid;
+}
 
-/* Pied de page
-footer {
-  margin-top: 100px;
-  background-color: #000;
-  padding: 30px;
-  color: #fff;
-  display: flex;
-  flex-wrap:wrap;
-  justify-content: space-between;
-}
-footer .social-media{
-  display: flex;
-}
-footer .social-media p{
-  margin-right: 15px;
-  border: 1px solid #fff;
-  border-radius: 100%;
-  padding: 5px;
-  text-align:center;
-  width: 20px;
-  cursor:pointer;
-}
- Fin du pied de page */
-
-@media screen and (max-width: 640px){
-  nav .onglets .link, nav h1{
-    display:none;
-  }
-  .cards .card img{
-    width: 300px;
-  }
-}

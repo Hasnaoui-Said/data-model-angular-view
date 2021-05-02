@@ -9,14 +9,17 @@ import {FctEmailDataComponent} from './projet/email/fct-email-data/fct-email-dat
 import {LoginComponent} from './projet/login/login.component';
 import {FctEmailDataDetailComponent} from './projet/email/fct-email-data-detail/fct-email-data-detail.component';
 import {MenuComponent} from './projet/menu/menu.component';
+import {DashboardComponent} from './projet/dashboard/dashboard.component';
 
 const routes: Routes = [
   {path: '', component: LoginComponent},
   {path: 'menu', component: MenuComponent},
+  {path: 'dashboard', component: DashboardComponent},
   {path: 'country', component: CountryComponent},
   {path: 'login', component: LoginComponent},
   {path: 'prio', component: PrioritiesComponent},
   {path: 'data-mail', component: FctEmailDataComponent},
+  {path: 'UniNfz', component: FctEmailDataComponent},
   {path: 'data-mail-detail', component: FctEmailDataDetailComponent},
   {path: 'cat', component: CategoriesComponent}
 ];

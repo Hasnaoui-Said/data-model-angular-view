@@ -46,7 +46,6 @@ export class DimUserService {
     if (this._userLogin == null) {
       this._userLogin = new DimUser();
     }
-    this.findByEmailUserLogin();
     return this._userLogin;
   }
 
@@ -92,15 +91,13 @@ export class DimUserService {
     this.http.post<DimUser>(this.url + '/dim-user/login', this.user).subscribe(
       data => {
         if (data != null) {
-          console.log('reponce recieved' + this.user.email);
-          this.router.navigate(['/menu']);
-          this.email = this.user.email;
+          console.log('reponce recieved ' + this.user);
+          this.router.navigate(['/dashboard']);
         } else {
           console.log('reponce recieved bate bad user');
           this.msg = 'Bad credentials, enter an email et password valid';
         }
       },
-
       error => {
         console.log('execption occured');
       }

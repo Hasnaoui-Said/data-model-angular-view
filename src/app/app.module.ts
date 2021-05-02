@@ -19,6 +19,7 @@ import {FormsModule, NgForm} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
 import { FctEmailDataSearchComponent } from './projet/email/fct-email-data-search/fct-email-data-search.component';
+import { DashboardComponent } from './projet/dashboard/dashboard.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { FctEmailDataSearchComponent } from './projet/email/fct-email-data-searc
     FctEmailDataComponent,
     LoginComponent,
     FctEmailDataDetailComponent,
-    FctEmailDataSearchComponent
+    FctEmailDataSearchComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

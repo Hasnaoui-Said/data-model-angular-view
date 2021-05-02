@@ -5,7 +5,7 @@ import {NgForm} from '@angular/forms';
 
 
 @Component({
-  selector: 'app-connexion',
+  selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
 })
