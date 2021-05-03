@@ -88,13 +88,13 @@ export class DimUserService {
 
   // @ts-ignore
   public loginUser(user: DimUser) {
-    this.http.post<DimUser>(this.url + '/dim-user/login', this.user).subscribe(
+    this.http.get<DimUser>(this.url + '/dim-user/email/' + this.user.email + '/password/' + this.user.password).subscribe(
       data => {
         if (data != null) {
+          this.router.navigate(['/menu']);
           console.log('reponce recieved ' + this.user);
-          this.router.navigate(['/dashboard']);
         } else {
-          console.log('reponce recieved bate bad user');
+          console.log('reponce recieved bad user');
           this.msg = 'Bad credentials, enter an email et password valid';
         }
       },

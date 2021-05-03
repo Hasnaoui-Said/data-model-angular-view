@@ -6,7 +6,7 @@ import {BrowserModule} from '@angular/platform-browser';
 import {PrioritiesComponent} from './projet/priorities/priorities.component';
 import {CategoriesComponent} from './projet/categories/categories.component';
 import {FctEmailDataComponent} from './projet/email/fct-email-data/fct-email-data.component';
-import {LoginComponent} from './projet/login/login.component';
+import {LoginComponent} from './login/login.component';
 import {FctEmailDataDetailComponent} from './projet/email/fct-email-data-detail/fct-email-data-detail.component';
 import {MenuComponent} from './projet/menu/menu.component';
 import {DashboardComponent} from './projet/dashboard/dashboard.component';

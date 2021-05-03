@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {DimUserService} from '../../controller/service/dim-user.service';
-import {DimUser} from '../../controller/model/dim-user.model';
+import {DimUserService} from '../controller/service/dim-user.service';
+import {DimUser} from '../controller/model/dim-user.model';
 import {NgForm} from '@angular/forms';
 
 

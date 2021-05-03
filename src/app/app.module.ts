@@ -5,7 +5,7 @@ import {CategoriesComponent} from './projet/categories/categories.component';
 import {CategorieListComponent} from './projet/categories/categorie-list/categorie-list.component';
 import {FctEmailDataComponent} from './projet/email/fct-email-data/fct-email-data.component';
 import {FctEmailDataDetailComponent} from './projet/email/fct-email-data-detail/fct-email-data-detail.component';
-import {LoginComponent} from './projet/login/login.component';
+import {LoginComponent} from './login/login.component';
 import {CountryCreateComponent} from './projet/country/country-create/country-create.component';
 import {CountryComponent} from './projet/country/country.component';
 import {PrioritiesComponent} from './projet/priorities/priorities.component';

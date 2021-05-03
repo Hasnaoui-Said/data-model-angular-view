@@ -5,14 +5,14 @@
   </div>
   <div class="col-md-6">
     <div class="container">
-      <form #loginForm="ngForm" (ngSubmit)="loginUser()">
+      <form ><!--#loginForm="ngForm" (ngSubmit)="loginUser()"<input type="submit"  value="Login">-->
         <small class="text-danger">{{msg}}</small>
         <h1 style="text-align: center">LOGIN</h1>
         <label><b>Nom or mail</b></label>
         <input type="email" placeholder="user or mail" name="email" [(ngModel)]="user.email">
         <label><b>Mot de passe</b></label>
         <input type="password" placeholder="password" name="password" [(ngModel)]="user.password">
-        <input type="submit"  value="Login">
+        <button class="btn btn-block btn-outline-info" (click)="loginUser()">Login</button>
         <div class="row">
           <div class="col-sm">
             <div class="custom-checkbox"><input type="checkbox">Remember me</div>
