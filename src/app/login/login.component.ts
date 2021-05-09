@@ -26,4 +26,7 @@ export class LoginComponent implements OnInit {
   get msg(): string {
     return this.userService.msg;
   }
+  get booleans(): boolean {
+    return this.userService.booleans;
+  }
 }

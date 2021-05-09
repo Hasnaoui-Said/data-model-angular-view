@@ -32,6 +32,7 @@ export class FctEmailDataComponent implements OnInit {
   }
 
   public save(){
+    this.emailData.user_id.reference = this.user.reference;
     return this.fctEmailDateService.save();
   }
 
@@ -43,6 +44,9 @@ export class FctEmailDataComponent implements OnInit {
   }
   get users(): Array<DimUser> {
     return this.userService.users;
+  }
+  get user(): DimUser {
+    return this.userService.user;
   }
   get states(): Array<DimEmailState> {
     return this.stateService.states;
@@ -56,6 +60,10 @@ export class FctEmailDataComponent implements OnInit {
 
   get emailDatas(): Array<FctEmailData> {
     return this.fctEmailDateService.emailDatas;
+  }
+
+  get isExist(): string {
+    return this.fctEmailDateService.isExist;
   }
 
 

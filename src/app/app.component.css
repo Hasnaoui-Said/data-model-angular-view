@@ -1,0 +1,26 @@
+
+
+.ifrozet {
+  font-size: 30px;
+}
+
+.login {
+  font-size: 30px;
+  padding-right: -600px;
+}
+
+.contacts {
+  color: #cccccc;
+}
+
+.contacts:hover {
+  color: #ffffff;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 350px) {
+  nav img {
+     display: none;
+}
+}
+

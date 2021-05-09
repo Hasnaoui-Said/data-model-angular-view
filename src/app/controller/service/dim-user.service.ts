@@ -3,7 +3,6 @@ import {DimUser} from '../model/dim-user.model';
 import {HttpClient} from '@angular/common/http';
 import {Router} from '@angular/router';
 import {NgForm} from '@angular/forms';
-import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -11,14 +10,26 @@ import {Observable} from 'rxjs';
 export class DimUserService {
 
   private _user: DimUser;
-  private _userLogin: DimUser;
   private _msg: string;
-  private _email: string;
   private _users: Array<DimUser>;
 
   private url = 'http://localhost:8036//news-lettre-app';
+  private _booleans: boolean;
+  private _logoutUser: boolean;
+  private _clic: boolean;
 
-  constructor(private http: HttpClient, private router: Router) {
+  get clic(): boolean {
+    if (this._clic == null){
+      this._clic = false;
+    }
+    return this._clic;
+  }
+
+  set clic(value: boolean) {
+    this._clic = value;
+  }
+
+  constructor(private http: HttpClient, private router: Router ) {
   }
 
   public findAll() {
@@ -42,16 +53,6 @@ export class DimUserService {
     this._user = value;
   }
 
-  get userLogin(): DimUser {
-    if (this._userLogin == null) {
-      this._userLogin = new DimUser();
-    }
-    return this._userLogin;
-  }
-
-  set userLogin(value: DimUser) {
-    this._userLogin = value;
-  }
 
   get msg(): string {
     if (this._msg == null) {
@@ -62,17 +63,6 @@ export class DimUserService {
 
   set msg(value: string) {
     this._msg = value;
-  }
-
-  get email(): string {
-    if (this._email == null) {
-      this._email = '';
-    }
-    return this._email;
-  }
-
-  set email(value: string) {
-    this._email = value;
   }
 
   get users(): Array<DimUser> {
@@ -86,32 +76,47 @@ export class DimUserService {
     this._users = value;
   }
 
-  // @ts-ignore
   public loginUser(user: DimUser) {
-    this.http.get<DimUser>(this.url + '/dim-user/email/' + this.user.email + '/password/' + this.user.password).subscribe(
-      data => {
-        if (data != null) {
-          this.router.navigate(['/menu']);
-          console.log('reponce recieved ' + this.user);
-        } else {
-          console.log('reponce recieved bad user');
-          this.msg = 'Bad credentials, enter an email et password valid';
-        }
-      },
-      error => {
-        console.log('execption occured');
+    this.http.post<DimUser>(this.url + '/dim-user/login/' , user).subscribe(
+    data => {
+      if (data != null) {
+        this.booleans = true;
+        this.user = data;
+        this.router.navigate(['/menu']);
+        console.log('reponce recieved ' + this.user.firstName);
+      } else {
+        console.log('reponce recieved bad user');
+        this.msg = 'Bad credentials, enter an email et password valid';
       }
-    );
+    },
+    error => {
+      console.log('execption occured');
+    }
+  );
+
   }
 
-  public findByEmailUserLogin() {
-    this.http.get<DimUser>(this.url + '/dim-user/email' + this.email).subscribe(
-      data => {
-       this.userLogin = data;
-        console.log(data);
-      }, error => {
-        console.log('error lors du loading users');
-      }
-    );
+
+  get booleans(): boolean {
+    if (this._booleans == null){
+      this._booleans = false;
+    }
+    return this._booleans;
+  }
+
+  set booleans(value: boolean) {
+    this._booleans = value;
+  }
+  get logoutUser(): boolean {
+    if (this._logoutUser == null){
+      this._logoutUser = false;
+    }
+    this.booleans = false;
+    this.clic = false;
+    return this._logoutUser;
+  }
+
+  set logoutUser(value: boolean) {
+    this._logoutUser = value;
   }
 }

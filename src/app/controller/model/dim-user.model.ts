@@ -3,7 +3,7 @@ import {DimCountry} from './dim-country.model';
 export class DimUser {
   public userId: number;
   public lastName: string;
-  public fistName: string;
+  public firstName: string;
   public reference: string;
   public phone: string;
   public ville: string;
@@ -15,6 +15,7 @@ export class DimUser {
 
   constructor() {
     this.lastName = '';
+    this.firstName = '';
     this.userName = '';
     this.reference = '';
     this.phone = '';

@@ -13,8 +13,21 @@ export class MenuComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  get userLogin(): DimUser {
-    return this.userService.userLogin;
+  get user(): DimUser {
+    return this.userService.user;
+  }
+
+  public  logoutUser(){
+    this.booleans = false;
+    this.userService.logoutUser;
+  }
+
+  get booleans(): boolean {
+    return this.userService.booleans;
+  }
+  set booleans(value: boolean){
+     this.userService.booleans;
   }
 
 }
+

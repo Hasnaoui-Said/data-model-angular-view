@@ -1,33 +1,40 @@
-
-<div class="row">
-  <div class="col-md-6 bordre">
-   <h4>Test log in</h4>
-  </div>
-  <div class="col-md-6">
-    <div class="container">
-      <form ><!--#loginForm="ngForm" (ngSubmit)="loginUser()"<input type="submit"  value="Login">-->
-        <small class="text-danger">{{msg}}</small>
-        <h1 style="text-align: center">LOGIN</h1>
-        <label><b>Nom or mail</b></label>
-        <input type="email" placeholder="user or mail" name="email" [(ngModel)]="user.email">
-        <label><b>Mot de passe</b></label>
-        <input type="password" placeholder="password" name="password" [(ngModel)]="user.password">
-        <button class="btn btn-block btn-outline-info" (click)="loginUser()">Login</button>
-        <div class="row">
-          <div class="col-sm">
-            <div class="custom-checkbox"><input type="checkbox">Remember me</div>
+<div class="col-sm col-lg col-xl col-md" *ngIf="!booleans">
+  <h3>Test log in</h3>
+  <div class="rwo">
+    <div class="col-md-6">
+      <div class="container">
+        <form class="color" #loginForm="ngForm" (ngSubmit)="loginUser()">
+          <small class="text-danger">{{msg}}</small>
+          <h1 style="text-align: center">LOGIN</h1>
+          <label><b>Nom or mail</b></label>
+          <input type="email" placeholder="user or mail" name="email" [(ngModel)]="user.email">
+          <label><b>Mot de passe</b></label>
+          <input type="password" placeholder="password" name="password" [(ngModel)]="user.password">
+          <input class="logIn col-lg col-sm col-md btn btn-block btn-outline-info" type="submit" value="Login">
+          <div class="row">
+            <div class="col-sm">
+              <div class="custom-checkbox"><input type="checkbox">Remember me</div>
+            </div>
           </div>
-        </div>
-        <div class="row">
-          <div class="col-sm">
+          <div class="row">
+            <div class="col-sm">
+            </div>
+            <div class="col-sm">
+              <a href="#"><p>Forget password?</p></a>
+            </div>
           </div>
-          <div class="col-sm">
-            <a href="#" ><p>Forget password</p></a>
-          </div>
-        </div>
-      </form>
+        </form>
+      </div>
+    </div>
+    <div class="col-md-6 vacheMar">
+      <img class="vache" src="../../assets/image/Vache-2.png" alt="vache">
     </div>
   </div>
+
 </div>
+<router-outlet></router-outlet>
+
+
+
 
 
