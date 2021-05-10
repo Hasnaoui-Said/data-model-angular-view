@@ -10,6 +10,7 @@ export class DimUser {
   public email: string;
   public password: string;
   public userName: string;
+  public stateUser: string;
   // tslint:disable-next-line:variable-name
   public ct_id: DimCountry;
 
@@ -17,6 +18,7 @@ export class DimUser {
     this.lastName = '';
     this.firstName = '';
     this.userName = '';
+    this.stateUser = '';
     this.reference = '';
     this.phone = '';
     this.ville = '';

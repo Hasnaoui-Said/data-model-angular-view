@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {FctEmailData} from '../../../controller/model/fct-email-data.model';
 import {FctEmailDateService} from '../../../controller/service/fct-email-date.service';
+import {DimUserService} from '../../../controller/service/dim-user.service';
 
 @Component({
   selector: 'app-chek-email',
@@ -11,7 +12,7 @@ export class ChekEmailComponent implements OnInit {
   private _cleccheked: boolean;
   private _isNull: boolean;
 
-  constructor(private fctEmailDateService: FctEmailDateService) {
+  constructor(private fctEmailDateService: FctEmailDateService , private userService: DimUserService) {
   }
 
   get cleccheked(): boolean {
@@ -26,6 +27,10 @@ export class ChekEmailComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  get user() {
+    return  this.userService.user;
   }
 
   get emailData(): FctEmailData {
